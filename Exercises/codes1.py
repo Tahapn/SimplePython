@@ -37,7 +37,7 @@ def swap(text):
     print(text[-1] + text[1:-1] + text[0])
 
 
-### function that calculated sum of three numbers. if two of them are the same number it return 0. ####
+#### function that calculated sum of three numbers. if two of them are the same number it return 0. ####
 
 numbers1 = [90,10,11]
 numbers2 = [10,10,2]
@@ -52,3 +52,25 @@ def sum_of_numbers(list_of_numbers : list):
 
 print(sum_of_numbers(numbers1))
 print(sum_of_numbers(numbers2))
+
+
+#### average of few numbers ####
+nums = [1,2,3,5,4]
+def average(numbers : list):
+    sum_of_number = sum(numbers)
+    number_of_members = len(numbers)
+    return sum_of_number / number_of_members
+
+print(average(nums))
+
+
+#### fibonacci sequence with a given number of members ####
+def fibonacci(lenght):
+    sequnce = [0,1]
+    for _ in range(lenght -2 ) :
+        sequnce.append(sum(sequnce[-2:]))
+    
+    print(sequnce)
+
+fibonacci(7)
+
