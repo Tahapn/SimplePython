@@ -72,7 +72,7 @@ def function_choice():
             time.sleep(3)
 
         case _ :
-            print('invalid input please enter one this words : (show,insert,sbi,sbn,delete)')
+            print('invalid input. please enter one of these words : (show,insert,sbi,sbn,delete)')
             function_choice()
 
 function_choice()
