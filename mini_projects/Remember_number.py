@@ -8,14 +8,15 @@ def main():
 
     console = Console()
 
-    number = randint(1_000_000,9_999_999)
+    number = randint(100_000_000, 999_999_999)
     console.print(f'The number is [bold green] {number:,d} [/bold green]')
 
-    n = 5
+    n = 6
     while n != -1:
-        console.print(f' clear screen in [bold red] {n} [/bold red] seconds' , end='\r')
-        n-=1
-        sleep(0.9)
+        console.print(f' clear screen in [bold red] {
+                      n} [/bold red] seconds', end='\r')
+        n -= 1
+        sleep(1)
 
     system('cls')
 
@@ -26,9 +27,9 @@ def main():
         except ValueError:
             console.print('[bold red] Please enter a valid number [/bold red]')
 
-    if user_input == number :
+    if user_input == number:
         console.print('[bold green] YES YOU WIN [/bold green]')
-    else :
+    else:
         console.print('[bold red] NO YOU LOSE [/bold red]')
 
     console.print(f'The number was [bold blue] {number:,d} [/bold blue] ')
@@ -44,8 +45,9 @@ def replay():
     elif user.lower() == 'n':
         print('Okay goodbye')
 
-    else : 
+    else:
         print('please enter either Y or N. ')
         replay()
-    
+
+
 main()
